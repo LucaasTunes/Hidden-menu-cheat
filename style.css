@@ -1,0 +1,61 @@
+/* Estilos para a barra de navegação quando a tela tem largura maior que 480px */
+#nav1 {
+    padding: 20px 100px; /* Espaçamento interno */
+    background: linear-gradient(rgb(7, 0, 112), rgb(31, 7, 252), rgb(1, 95, 16)); /* Fundo gradiente */
+}
+
+.nav-bar i {
+    font-size: 50px; /* Tamanho do ícone */
+}
+
+.nav-bar ul {
+    display: flex; /* Exibe a lista como flexbox */
+    flex-direction: row; /* Organiza os itens na horizontal */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+    list-style-type: none; /* Remove marcadores de lista */
+}
+
+.nav-bar li {
+    font-style: oblique; /* Estilo da fonte inclinada */
+    margin-right: 20px; /* Espaçamento entre os elementos li */
+}
+
+.nav-bar a {
+    color: antiquewhite; /* Cor dos links */
+}
+
+.menu-button {
+    display: none; /* Inicialmente oculta o botão de menu */
+}
+
+/* Estilos para a barra de navegação quando a tela tem largura igual ou menor que 480px */
+@media screen and (max-width: 480px) {
+    #nav1 {
+        padding: 20px 100px; /* Espaçamento interno */
+        background: linear-gradient(rgb(7, 0, 112), rgb(31, 7, 252), rgb(1, 95, 16)); /* Fundo gradiente */
+        position: fixed; /* Fixa a barra de navegação na tela */
+        width: 5%; /* Largura da barra de navegação */
+        height: 100%; /* Altura da barra de navegação */
+        right: -70%; /* Posição inicial fora da tela */
+        top: 0;
+        transition: right 0.5s ease; /* Transição suave da propriedade right */
+    }
+
+    .nav-bar i {
+        font-size: 50px; /* Tamanho do ícone */
+    }
+
+    .nav-bar ul {
+        display: flex; /* Exibe a lista como flexbox */
+        flex-direction: column; /* Organiza os itens na vertical */
+        list-style-type: none; /* Remove marcadores de lista */
+    }
+
+    .menu-button {
+        display: flex; /* Exibe o botão de menu */
+        align-items: center; /* Alinha verticalmente os elementos dentro do botão */
+        background: none; /* Remove o fundo do botão */
+        border: none; /* Remove a borda do botão */
+        cursor: pointer; /* Define o cursor como ponteiro */
+    }
+}
