@@ -23,39 +23,39 @@
 .nav-bar a {
     color: antiquewhite; /* Cor dos links */
 }
-
-.menu-button {
-    display: none; /* Inicialmente oculta o botão de menu */
+.menu-button{
+    display: none;
 }
+
 
 /* Estilos para a barra de navegação quando a tela tem largura igual ou menor que 480px */
 @media screen and (max-width: 480px) {
     #nav1 {
-        padding: 20px 100px; /* Espaçamento interno */
-        background: linear-gradient(rgb(7, 0, 112), rgb(31, 7, 252), rgb(1, 95, 16)); /* Fundo gradiente */
-        position: fixed; /* Fixa a barra de navegação na tela */
-        width: 5%; /* Largura da barra de navegação */
-        height: 100%; /* Altura da barra de navegação */
-        right: -70%; /* Posição inicial fora da tela */
+        padding: 20px 100px;
+        background: linear-gradient(rgb(7, 0, 112), rgb(31, 7, 252), rgb(1, 95, 16));
+        position: fixed;
+        width: 5%;
+        height: 100%;
+        right: -70%;
         top: 0;
-        transition: right 0.5s ease; /* Transição suave da propriedade right */
+        transition: right 0.5s ease;
     }
 
     .nav-bar i {
-        font-size: 50px; /* Tamanho do ícone */
+        font-size: 50px;
     }
 
     .nav-bar ul {
-        display: flex; /* Exibe a lista como flexbox */
-        flex-direction: column; /* Organiza os itens na vertical */
-        list-style-type: none; /* Remove marcadores de lista */
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
     }
 
     .menu-button {
-        display: flex; /* Exibe o botão de menu */
-        align-items: center; /* Alinha verticalmente os elementos dentro do botão */
-        background: none; /* Remove o fundo do botão */
-        border: none; /* Remove a borda do botão */
-        cursor: pointer; /* Define o cursor como ponteiro */
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2; /* Certifica-se de que o botão esteja acima do menu */
     }
 }
